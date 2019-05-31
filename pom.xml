@@ -32,16 +32,16 @@
         </dependency>
     </dependencies>
 
-    <build>
+  <!--  <build>
         <plugins>
-            <!--  创建可执行jar -->
+            &lt;!&ndash;  创建可执行jar &ndash;&gt;
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
+-->
 
 
 </project>
