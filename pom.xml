@@ -30,6 +30,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>test.somegroup</groupId>
+            <artifactId>somewar</artifactId>
+            <version>1.0.0</version>
+            <type>war</type>
+        </dependency>
+
     </dependencies>
 
   <!--  <build>
@@ -40,8 +48,49 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+    </build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <version>1.4.9</version>
+                <configuration>
+                    <container>
+                        <containerId>jetty6x</containerId>
+                        <type>remote</type>
+                    </container>
+
+                    <configuration>
+                        <type>runtime</type>
+                        <properties>
+                            <cargo.hostname>106.12.90.62</cargo.hostname>
+                            <cargo.servlet.port>8111</cargo.servlet.port>
+                            <cargo.remote.username>root</cargo.remote.username>
+                            <cargo.remote.password>renxin988.</cargo.remote.password>
+                        </properties>
+                    </configuration>
+
+                    <deployer>
+                        <type>remote</type>
+                    </deployer>
+
+                    <deployables>
+                        <deployable>
+                            <groupId>test.somegroup</groupId>
+                            <artifactId>somewar</artifactId>
+                            <type>war</type>
+                            <properties>
+                                <context>/myAppContext</context>
+                            </properties>
+                        </deployable>
+                    </deployables>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
--->
+
+
 
 
 </project>
