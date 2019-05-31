@@ -16,12 +16,7 @@
     </parent>
 
     <dependencies>
-        <dependency>
-            <groupId>javabuilder</groupId>
-            <artifactId>javabuilder</artifactId>
-            <scope>system</scope>
-            <!--<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/migu_msg.jar</systemPath>-->
-        </dependency>
+
 
         <!--  这里使用到Web 所以引入了web starter，版本号由于在上面的parent中已包含 dependency-management，所以不需要指定 -->
         <dependency>
