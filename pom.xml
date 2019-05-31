@@ -34,7 +34,7 @@
         <plugins>
             <!--  创建可执行jar -->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
