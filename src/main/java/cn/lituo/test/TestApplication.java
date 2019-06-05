@@ -20,6 +20,6 @@ public class TestApplication {
 
     @RequestMapping("/aaa")
     public String index(){
-        return "cuyang";
+        return "JAVA程序之家";
     }
 }
